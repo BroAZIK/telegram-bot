@@ -1,7 +1,8 @@
 from telegram import Bot
 import time
+from pprint import pprint
 
-token = "6567664761:AAEi3kspotCXSdGZr7H849nudbEj31p5mE8"
+token = "6379988839:AAFNKWC25lG19PviPOa9jjAm1WJfPEmAJC8"
 
 bot = Bot(token=token)
 
@@ -21,6 +22,7 @@ def echo():
             message = last_update.message
             # pprint(message)
             print("-"*50)
+            pprint(message)
 
             chat_id = message.chat.id
             text = message.text 
