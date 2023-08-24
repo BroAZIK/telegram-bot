@@ -8,6 +8,7 @@ from .sticker import Sticker
 from .contact import Contact
 from .dice import Dice
 from .location import Location
+from .voice import Voice
 
 
 class Message:
@@ -29,6 +30,7 @@ class Message:
         contact: Contact=None,
         dice: Dice=None,
         location: Location=None,
+        voice: Voice=None,
     ):
         self.message_id = message_id
         self.date = date
@@ -46,6 +48,7 @@ class Message:
         self.contact = contact
         self.dice = dice
         self.location = location
+        self.voice = voice
 
     def __str__(self):
         return f"Message {self.message_id} from {self.from_user} in {self.chat}"

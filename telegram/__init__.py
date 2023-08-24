@@ -79,8 +79,6 @@ class Bot:
                     update["message"]["document"]["file_id"],
                     update["message"]["document"]["file_unique_id"],
                     update["message"]["document"].get("file_name"),
-                    update["message"]["document"].get("mime_type"),
-                    update["message"]["document"].get("file_size"),
                 )
 
             video = None
@@ -154,6 +152,7 @@ class Bot:
                 contact=contact,
                 dice=dice,
                 location=location,
+                voice=voice,
             )
 
             update = Update(
