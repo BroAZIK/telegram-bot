@@ -175,4 +175,54 @@ class Bot:
         resp = requests.post(self.api_url + method, params)
 
         return resp
-        
+
+    def send_photo(self, chat_id: int, photo: str):
+        method = "sendPhoto"
+        params = {
+            "chat_id": chat_id,
+            "photo": photo,
+        }
+        resp = requests.post(self.api_url + method, params)
+
+        return resp
+
+    def send_audio(self, chat_id: int, audio: str):
+        method = "sendAudio"
+        params = {
+            "chat_id": chat_id,
+            "audio": audio,
+        }
+        resp = requests.post(self.api_url + method, params)
+
+        return resp
+
+    def send_document(self, chat_id: int, document: str):
+        method = "sendDocument"
+        params = {
+            "chat_id": chat_id,
+            "document": document,
+        }
+        resp = requests.post(self.api_url + method, params)
+
+        return resp
+
+    def send_video(self, chat_id: int, video: str):
+        method = "sendVideo"
+        params = {
+            "chat_id": chat_id,
+            "video": video,
+        }
+        resp = requests.post(self.api_url + method, params)
+
+        return resp
+
+    def send_voice(self, chat_id: int, voice: str):
+        method = "sendVoice"
+        params = {
+            "chat_id": chat_id,
+            "voice": voice,
+        }
+        resp = requests.post(self.api_url + method, params)
+
+        return resp
+

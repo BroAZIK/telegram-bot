@@ -26,8 +26,13 @@ def echo():
 
             chat_id = message.chat.id
             text = message.text 
+            photo = message.photo
 
-            bot.send_message(chat_id=chat_id, text=text)
+            if text != None:
+                bot.send_message(chat_id=chat_id, text=text)
+            elif photo != None:
+                photo_id = photo[-1].file_id
+                bot.send_photo(chat_id=chat_id, photo=photo_id)
 
             update_id = updates[-1].update_id
 
